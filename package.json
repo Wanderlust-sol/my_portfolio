@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "",
     "lint": "next lint",
     "lint-fix": "eslint '**/*.{ts,tsx}'  --ext .ts,.tsx --fix",
     "prepare": "husky install"
