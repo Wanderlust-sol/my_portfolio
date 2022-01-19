@@ -1,8 +1,13 @@
 import React from 'react';
-// import './Layout.module.scss';
+import Header from '../components/Header';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  return <div>{children}</div>;
+  return (
+    <div>
+      <Header />
+      {children}
+    </div>
+  );
 };
 
 export default Layout;

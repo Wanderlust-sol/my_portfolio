@@ -1,21 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { MdClose } from 'react-icons/md';
 import { useCommonDispatch } from '../context/commonContext';
 import style from './Menu.module.scss';
 
 const Menu = () => {
   const [closeMenu, setCloseMenu] = useState<boolean>(false);
+  const [routeName, setRouteName] = useState<string>('');
   const dispatch = useCommonDispatch();
+  const router = useRouter();
 
   // close 버튼 눌렀을때 작동하는 함수
   const handleClose = () => {
     setCloseMenu(true);
     setTimeout(() => {
-      setCloseMenu(false);
       dispatch({ type: 'CLICKED', payload: false });
+      setCloseMenu(false);
     }, 1000);
   };
+
+  useEffect(() => {
+    setRouteName(router.pathname.replace('/', ''));
+    return () => {
+      setRouteName(router.pathname.replace('/', ''));
+    };
+  }, [router.pathname]);
+
   return (
     <div>
       <div
@@ -27,19 +38,32 @@ const Menu = () => {
         </div>
         <div className={style.menusList}>
           <ul className={style.menus}>
-            <div className={style.menuItem}>
-              <li className={style.menuName1}>WANDERLUST_SOL</li>
-              <div className={style.menuHighlight1}></div>
+            <div className={style.menuItem} onClick={handleClose}>
+              <Link href="/">
+                <li className={style.menuName1}>WANDERLUST_SOL</li>
+              </Link>
+              <div
+                className={style.menuHighlight1}
+                style={{ opacity: routeName === '' && 1 }}
+              ></div>
             </div>
-            <div className={style.menuItem}>
-              <li className={style.menuName2}>PROJECT.</li>
-              <div className={style.menuHighlight2}></div>
+            <div className={style.menuItem} onClick={handleClose}>
+              <Link href="/Project">
+                <li className={style.menuName2}>PROJECT.</li>
+              </Link>
+              <div
+                className={style.menuHighlight2}
+                style={{ opacity: routeName === 'Project' && 1 }}
+              ></div>
             </div>
-            <div className={style.menuItem}>
+            <div className={style.menuItem} onClick={handleClose}>
               <Link href="/Photography">
                 <li className={style.menuName3}>PHOTOGRAPHY.</li>
               </Link>
-              <div className={style.menuHighlight3}></div>
+              <div
+                className={style.menuHighlight3}
+                style={{ opacity: routeName === 'Photography' && 1 }}
+              ></div>
             </div>
           </ul>
           <div className={style.contacts}>
