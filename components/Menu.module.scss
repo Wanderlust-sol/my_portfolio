@@ -64,10 +64,10 @@
   }
   
   .menuItem:hover {
-    //   .menu_mask1 {
-    //     opacity: 1;
-    //     transition: 0.2s;
-    //   }
+    .menuHighlight1 {
+      opacity: 1;
+      transition: 0.2s ease-in;
+    }
     .menuHighlight2 {
       opacity: 1;
       transition: 0.2s ease-in;
@@ -79,7 +79,7 @@
   }
   .menuHighlight1 {
     background-color: #b2dffb;
-    opacity: 1;
+    opacity: 0;
     width: 337px;
     height: 14px;
     border-radius: 2px;
