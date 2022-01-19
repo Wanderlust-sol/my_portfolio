@@ -1,0 +1,129 @@
+.menuVisible {
+    background-color: white;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80%;
+    animation: show_menu_bg 0.5s ease-out;
+  }
+  
+  @keyframes show_menu_bg {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  
+  .menusList {
+    position: absolute;
+    top: 50%;
+    margin-top: -170px;
+    margin-left: 265px;
+    border-bottom: 3px solid #b2dffb;
+    padding-bottom: 50px;
+    padding-right: 180px;
+  }
+  
+  .menus {
+    font-family: "Source Serif Pro", serif;
+    font-size: 35px;
+    font-weight: 700;
+    list-style: none;
+    padding-left: 0;
+    letter-spacing: 1px;
+    margin-bottom: 250px;
+  }
+  
+  .menus {
+    li {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  
+  .menuItem {
+    position: relative;
+  }
+  
+  .menuName1 {
+    margin-top: -50px;
+  }
+  
+  .menuName2 {
+    margin-top: -5px;
+    cursor: pointer;
+  }
+  
+  .menuName3 {
+    margin-top: 45px;
+    cursor: pointer;
+  }
+  
+  .menuItem:hover {
+    //   .menu_mask1 {
+    //     opacity: 1;
+    //     transition: 0.2s;
+    //   }
+    .menuHighlight2 {
+      opacity: 1;
+      transition: 0.2s ease-in;
+    }
+    .menuHighlight3 {
+      opacity: 1;
+      transition: 0.2s ease-in;
+    }
+  }
+  .menuHighlight1 {
+    background-color: #b2dffb;
+    opacity: 1;
+    width: 337px;
+    height: 14px;
+    border-radius: 2px;
+    position: absolute;
+    top: -36px;
+    left: -7px;
+  }
+  
+  .menuHighlight2 {
+    background-color: #ccedd2;
+    opacity: 0;
+    width: 172px;
+    height: 14px;
+    border-radius: 2px;
+    position: absolute;
+    top: 9px;
+    left: -7px;
+  }
+  
+  .menuHighlight3 {
+    background-color: #ffc55c;
+    opacity: 0;
+    width: 290px;
+    height: 14px;
+    border-radius: 2px;
+    position: absolute;
+    top: 59px;
+    left: -7px;
+  }
+  
+  .contacts {
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .closeIcon {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    cursor: pointer;
+  }
+  
