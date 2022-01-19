@@ -1,0 +1,150 @@
+@mixin header {
+  background-color: white;
+  display: flex;
+  position: fixed;
+  z-index: 3; 
+}
+
+.headerTop {
+  @include header;
+  width: 100%;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 4;
+}
+
+.logoName {
+  margin-left: 55px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.language {
+  display: flex;
+  list-style: none;
+  margin-right: 60px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.headerLeft {
+  @include header;
+  // width: 55px;
+  height: 100%;
+  align-items: center;
+  top: 0;
+}
+
+.navToggle {
+  display: flex;
+  cursor: pointer;
+}
+
+.menubar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 45px;
+}
+.menubar1 {
+  background-color: black;
+  width: 16px;
+  height: 2px;
+}
+
+.menubar2 {
+  background-color: black;
+  width: 20px;
+  height: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.menubar3 {
+  background-color: black;
+  width: 14px;
+  height: 2px;
+}
+
+.menuName {
+  display: flex;
+  align-content: space-between;
+  transform: rotate(270deg);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.menuName1,
+.menuName2,
+.menuName3 {
+  margin-right: 2px;
+}
+
+.navToggle:hover {
+  .menubar1 {
+    width: 24px;
+    transition: 0.3s;
+  }
+  .menubar2 {
+    width: 29px;
+    transition: 0.7s;
+  }
+  .menubar3 {
+    width: 20px;
+    transition: 0.5s;
+  }
+  .menuName1 {
+    margin-bottom: -2px;
+    margin-right: 4px;
+    transition: 0.1s;
+  }
+  .menuName2 {
+    margin-top: 5px;
+    margin-right: 4px;
+    transition: 0.1s;
+  }
+  .menuName3 {
+    margin-bottom: -1px;
+    transition: 0.1s;
+  }
+  .menuName4 {
+    margin-top: 4px;
+    margin-left: 3px;
+    transition: 0.1s;
+  }
+}
+
+.headerRight {
+  @include header;
+  width: 55px;
+  height: 100%;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.navSocial {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.navSocial1,
+.navSocial2 {
+  margin-bottom: 5px;
+}
+
+.headerBottom {
+  @include header;
+  width: 100%;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
