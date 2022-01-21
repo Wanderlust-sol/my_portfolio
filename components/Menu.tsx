@@ -31,7 +31,7 @@ const Menu = () => {
     <div>
       <div
         className={style.menuVisible}
-        style={{ transition: '1s ease', width: closeMenu && '0%' }}
+        style={{ transition: '1s ease', width: closeMenu ? '0%' : '80%' }}
       >
         <div className={style.closeIcon} onClick={handleClose}>
           <MdClose />
@@ -44,7 +44,7 @@ const Menu = () => {
               </Link>
               <div
                 className={style.menuHighlight1}
-                style={{ opacity: routeName === '' && 1 }}
+                style={{ opacity: routeName === '' ? 1 : 0 }}
               ></div>
             </div>
             <div className={style.menuItem} onClick={handleClose}>
@@ -53,7 +53,7 @@ const Menu = () => {
               </Link>
               <div
                 className={style.menuHighlight2}
-                style={{ opacity: routeName === 'Project' && 1 }}
+                style={{ opacity: routeName === 'Project' ? 1 : 0 }}
               ></div>
             </div>
             <div className={style.menuItem} onClick={handleClose}>
@@ -62,7 +62,7 @@ const Menu = () => {
               </Link>
               <div
                 className={style.menuHighlight3}
-                style={{ opacity: routeName === 'Photography' && 1 }}
+                style={{ opacity: routeName === 'Photography' ? 1 : 0 }}
               ></div>
             </div>
           </ul>

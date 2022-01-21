@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Alert from '../components/Alert';
 
 import style from './Photography.module.scss';
-import mockData from '../dummy/mock_photo.json';
+// import mockData from '../dummy/mock_photo.json';
 
 const arr = [...Array(18)].map((v, i) => i + 1);
 
