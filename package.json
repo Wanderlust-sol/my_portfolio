@@ -8,7 +8,8 @@
     "test": "",
     "lint": "next lint",
     "lint-fix": "eslint '**/*.{ts,tsx}'  --ext .ts,.tsx --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "next build && next export"
   },
   "dependencies": {
     "next": "12.0.8",
@@ -16,7 +17,8 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "react-scroll-parallax": "^2.4.3",
-    "sass": "^1.48.0"
+    "sass": "^1.48.0",
+    "swiper": "^7.4.1"
   },
   "devDependencies": {
     "@types/node": "17.0.8",

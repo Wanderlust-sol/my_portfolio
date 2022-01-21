@@ -3,18 +3,22 @@ import { FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Menu from './Menu';
 import { useCommonDispatch, useCommonState } from '../context/commonContext';
 import style from './Header.module.scss';
+import { useRouter } from 'next/router';
 
 const Header = () => {
   const dispatch = useCommonDispatch();
   const { isHoverMenu, isClickedMenu } = useCommonState();
+  const router = useRouter();
 
   return (
     <header>
       <div className={style.headerTop}>
-        <span className={style.logoName}>WANDERLUST_SOL</span>
+        <span className={style.logoName} onClick={() => router.push('/')}>
+          WANDERLUST_SOL
+        </span>
         <ul className={style.language}>
           <li>KO.</li>
-          <li style={{ marginLeft: 8 }}>EN.</li>
+          {/* <li style={{ marginLeft: 8 }}>EN.</li> */}
         </ul>
       </div>
       <div
@@ -44,13 +48,19 @@ const Header = () => {
       <div className={style.headerRight}>
         <ul className={style.navSocial}>
           <li className={style.navSocial1}>
-            <FaInstagram />
+            <a href="https://www.instagram.com/wanderlust_sol/" target="_blank">
+              <FaInstagram />
+            </a>
           </li>
           <li className={style.navSocial2}>
-            <FaYoutube />
+            <a href="https://www.youtube.com/channel/UCK-kGx26kYElTILPAqNMd5A" target="_blank">
+              <FaYoutube />
+            </a>
           </li>
           <li className={style.navSocial3}>
-            <FaGithub />
+            <a href="https://github.com/Wanderlust-sol" target="_blank">
+              <FaGithub />
+            </a>
           </li>
         </ul>
       </div>
