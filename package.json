@@ -8,7 +8,8 @@
     "test": "",
     "lint": "next lint",
     "lint-fix": "eslint '**/*.{ts,tsx}'  --ext .ts,.tsx --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "next build && next export"
   },
   "dependencies": {
     "next": "12.0.8",
