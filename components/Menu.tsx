@@ -40,7 +40,7 @@ const Menu = () => {
           <ul className={style.menus}>
             <div className={style.menuItem} onClick={handleClose}>
               <Link href="/">
-                <li className={style.menuName1}>WANDERLUST_SOL</li>
+                <li className={style.menuName1}>HOME</li>
               </Link>
               <div
                 className={style.menuHighlight1}
