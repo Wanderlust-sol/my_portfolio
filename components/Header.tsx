@@ -14,7 +14,7 @@ const Header = () => {
         <span className={style.logoName}>WANDERLUST_SOL</span>
         <ul className={style.language}>
           <li>KO.</li>
-          <li style={{ marginLeft: 8 }}>EN.</li>
+          {/* <li style={{ marginLeft: 8 }}>EN.</li> */}
         </ul>
       </div>
       <div
