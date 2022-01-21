@@ -466,7 +466,20 @@ textarea {
 
 // SwiperJS Slider
 
+.swiper {
+  padding: 55px 150px !important;
 
+   @media screen and (min-width: 1600px) {
+        padding: 55px 350px !important;
+    }
+    @media screen and (min-width: 2000px) {
+        padding: 55px 500px !important;
+    }
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
 
 .swiper-slide:not(.swiper-slide-active) {
   opacity: 0.25;
@@ -477,45 +490,42 @@ textarea {
   transition: all 0.5s 0s ease-in;
 }
 
-.swiper-slide {
-  margin-right: 38vw;
-}
+// .swiper-button-prev, .swiper-button-next {
+//   background: rgba(255, 255, 255, 0.816);
+//   width: 3.5rem !important;
+//   height: 3.5rem !important;
+//   border-radius: 99px !important;
+//   top: 36% !important;
 
-.swiper-button-prev, .swiper-button-next {
-  background: rgba(255, 255, 255, 0.816);
-  width: 3.5rem !important;
-  height: 3.5rem !important;
-  border-radius: 99px !important;
-  top: 36% !important;
-
-  &::after {
-    font-size: 1rem !important;
-  }
-}
+//   &::after {
+//     font-size: 1rem !important;
+//   }
+// }
 
 .swiper-button-prev {
   right: auto;
-  left: 25% !important;
+  left: 15% !important;
+  top: 90% !important;
 }
 
 .swiper-button-next {
   left: auto;
-  right: 25% !important;
+  right: 15% !important;
+  top: 90% !important;
 }
 
 .swiper-pagination {
   bottom: 4rem !important;
-
-  .swiper-pagination-bullet-active {
-    background: var(--primary-400);
-  }  
+  // .swiper-pagination-bullet-active {
+  //   background: rgb(78, 63, 58);
+  // }  
 }
 
-@media screen and (max-width: 640px) {
-  .swiper-button-prev, .swiper-button-next {
-    display: none !important;
-  }
-}
+// @media screen and (max-width: 640px) {
+//   .swiper-button-prev, .swiper-button-next {
+//     display: none !important;
+//   }
+// }
 
 // 폰트 설정
 
